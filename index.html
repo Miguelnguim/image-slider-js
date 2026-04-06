@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Image Slider moderne, responsive, infini et accessible - Vanilla JS">
+    <title>Modern Slider • Carousel d'images</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset minimal pour le projet standalone */
+        *, *::before, *::after { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-header">
+        <div class="container">
+            <h1>Modern Image Slider</h1>
+            <p>Carousel élégant • Vanilla JS • Prêt pour GitHub</p>
+        </div>
+    </div>
+
+    <div class="slider-wrapper" id="slider">
+        <!-- Conteneur principal du slider -->
+        <div class="slides-container" id="slides-container">
+            
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="https://picsum.photos/id/1015/1920/1080" 
+                     alt="Architecture moderne de Singapour la nuit" 
+                     loading="eager">
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="https://picsum.photos/id/133/1920/1080" 
+                     alt="Forêt automnale rougeoyante" 
+                     loading="lazy">
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="https://picsum.photos/id/160/1920/1080" 
+                     alt="Vue aérienne d'une ville côtière" 
+                     loading="lazy">
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="slide">
+                <img src="https://picsum.photos/id/201/1920/1080" 
+                     alt="Paysage montagneux au lever du soleil" 
+                     loading="lazy">
+            </div>
+            
+            <!-- Slide 5 -->
+            <div class="slide">
+                <img src="https://picsum.photos/id/1005/1920/1080" 
+                     alt="Lac alpin avec reflets" 
+                     loading="lazy">
+            </div>
+
+        </div>
+
+        <!-- Bouton Précédent -->
+        <button class="nav-btn prev-btn" id="prev-btn" aria-label="Image précédente">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M15 19l-7-7 7-7"/>
+            </svg>
+        </button>
+
+        <!-- Bouton Suivant -->
+        <button class="nav-btn next-btn" id="next-btn" aria-label="Image suivante">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M9 5l7 7-7 7"/>
+            </svg>
+        </button>
+
+        <!-- Indicateurs (dots) -->
+        <div class="dots" id="dots"></div>
+    </div>
+
+    <div class="container controls-info">
+        <p>✅ Navigation clavier (← →) • Swipe tactile • Auto-play • Pause au survol • Loop infini • Lazy loading</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
